@@ -448,129 +448,174 @@
   </div>
 </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center mb-4">
-        <h2 class="fw-bold">Testimonials</h2>
-        <p class="lead-sm">Words from Happy Travelers</p>
-      </div>
+  <section id="testimonials" class="section">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-1">Testimonials</h2>
+    <p class="lead-sm mb-4">Words from Happy Travelers</p>
 
-      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row justify-content-center g-4">
-              <div class="col-12 col-md-6">
-                <div class="soft-card p-4 h-100">
-                  <i class="bi bi-quote fs-1 d-block mb-3"></i>
-                  <p class="mb-4">“Seamless booking and such a classy experience. Hidden gems & great recommendations!”</p>
-                  <div class="d-flex align-items-center gap-3">
-                    <img src="https://i.pravatar.cc/64?img=12" class="rounded-circle" width="48" height="48" alt="Maker">
-                    <div>
-                      <strong>Maker</strong><br/>
-                      <small class="text-muted">From Indonesia</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="soft-card p-4 h-100">
-                  <i class="bi bi-quote fs-1 d-block mb-3"></i>
-                  <p class="mb-4">“Driver was super punctual & friendly. Will book again!”</p>
-                  <div class="d-flex align-items-center gap-3">
-                    <img src="https://i.pravatar.cc/64?img=32" class="rounded-circle" width="48" height="48" alt="Nia">
-                    <div>
-                      <strong>Nia</strong><br/>
-                      <small class="text-muted">From Singapore</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Tambah slide lain jika perlu -->
-        </div>
-        <div class="text-center mt-3">
-          <button class="btn btn-outline-dark btn-sm rounded-pill me-2" data-bs-target="#testimonialCarousel" data-bs-slide="prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="btn btn-outline-dark btn-sm rounded-pill" data-bs-target="#testimonialCarousel" data-bs-slide="next"><i class="bi bi-chevron-right"></i></button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA / CONTACT -->
-  <section id="contact" class="section bg-dark text-white">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-7">
-          <h3 class="fw-bold mb-3">Let’s Get You Moving</h3>
-          <p class="mb-4 text-white-50">Ready to book? Questions about routes, schedules, or prices? We’ll reply fast and tailor your trip.</p>
-          <a href="https://wa.me/6281234567890" class="btn btn-light btn-lg rounded-pill px-4"><i class="bi bi-whatsapp me-2"></i>Book via WhatsApp</a>
-        </div>
-        <div class="col-lg-5">
-          <div class="soft-card p-4 bg-white text-dark">
-            <h5 class="mb-3">Contact Details</h5>
-            <div class="d-flex align-items-start gap-3 mb-3">
-              <i class="bi bi-geo-alt fs-4"></i>
-              <div><strong>Location</strong><br/><span class="text-muted">Bali & Nusa Penida, Indonesia</span></div>
-            </div>
-            <div class="d-flex align-items-start gap-3 mb-3">
-              <i class="bi bi-envelope fs-4"></i>
-              <div><strong>Email</strong><br/><a href="mailto:hello@tourtravebali.com">hello@tourtravebali.com</a></div>
-            </div>
-            <div class="d-flex align-items-start gap-3 mb-1">
-              <i class="bi bi-telephone fs-4"></i>
-              <div><strong>Phone/WhatsApp</strong><br/><a href="https://wa.me/6281234567890">+62 812-3456-7890</a></div>
-            </div>
-            <small class="text-muted">Available 24/7</small>
+    <div class="testi-grid">
+      <!-- Card 1 -->
+      <article class="testi-card">
+        <div class="quote-mark">“</div>
+        <p class="testi-text">
+          “Seamless booking and such a classy experience. Hidden gems & great recommendations!”
+        </p>
+        <div class="testi-user">
+          <img src="img/testi/80095debe844d4086aec40abd58424f8.png" alt="Maker">
+          <div>
+            <div class="testi-name">Maker</div>
+            <div class="testi-meta">From Indonesia</div>
           </div>
         </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="testi-card">
+        <div class="quote-mark">“</div>
+        <p class="testi-text">
+          “Driver was super punctual & friendly. Will book again!”
+        </p>
+        <div class="testi-user">
+          <img src="img/testi/d20613b086d25dae50fc34d9a9ecca93.png" alt="Nia">
+          <div>
+            <div class="testi-name">Nia</div>
+            <div class="testi-meta">From Singapore</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="testi-card">
+        <div class="quote-mark">“</div>
+        <p class="testi-text">
+          “Best Bali trip ever. Comfortable car, flexible itinerary, and amazing photo spots!”
+        </p>
+        <div class="testi-user">
+          <img src="img/testi/80095debe844d4086aec40abd58424f8.png" alt="Akira">
+          <div>
+            <div class="testi-name">Akira</div>
+            <div class="testi-meta">From Japan</div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Tombol panah di tengah bawah -->
+    <div class="testi-nav">
+      <button class="testi-arrow left" aria-label="Previous">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M15 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="testi-arrow right" aria-label="Next">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+  <!-- ===== CTA / LET'S GET YOU MOVING ===== -->
+<section id="cta" class="cta-dark section">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <!-- Left -->
+      <div class="col-lg-6">
+        <h2 class="cta-title">Let’s Get You Moving</h2>
+        <p class="cta-desc">
+          Ready to book your ride? Have questions about tours or custom packages?
+          We’re here to help – fast, friendly, and always happy to make your trip easier.
+        </p>
+        <!-- ganti href WA sesuai nomormu -->
+        <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-light btn-lg rounded-pill cta-btn">
+          <!-- pakai ikonmu sendiri (PNG/SVG) -->
+          <img src="iconfooter/Vector.svg" alt="" class="me-2" style="width:18px;height:18px;">
+          Book Now
+        </a>
+      </div>
+      <!-- Right -->
+      <div class="col-lg-6">
+        <h3 class="cta-heading">Contact Details</h3>
+        <ul class="contact-list">
+          <li>
+            <span class="icon"><img src="iconfooter/location-01.png" alt=""></span>
+            <div><strong>Location:</strong> Bali &amp; Nusa Penida, Indonesia</div>
+          </li>
+          <li>
+            <span class="icon"><img src="iconfooter/mail-01.png" alt=""></span>
+            <div><strong>Email:</strong> <a href="mailto:hello@yourdriver.com">hello@yourdriver.com</a></div>
+          </li>
+          <li>
+            <span class="icon"><img src="iconfooter/call.png" alt=""></span>
+            <div><strong>Phone/WhatsApp:</strong> <a href="https://wa.me/6281234567890" target="_blank">+62 812 3456 7890</a></div>
+          </li>
+          <li>
+            <span class="icon"><img src="iconfooter/time-04.png" alt=""></span>
+            <div><strong>Available:</strong> 24/7</div>
+          </li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container footer-bar">
+    <div class="footer-copy">© 2025 TourTraveBali · Safe, Reliable, Private Rides</div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
 
-  <!-- FOOTER -->
-  <footer class="py-4">
-    <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
-      <div class="small">© <span id="year"></span> TourTraveBali · Safe, Reliable, Private Rides</div>
-      <div class="d-flex gap-3">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </footer>
+<!-- Bootstrap JS  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Tahun otomatis
-    document.getElementById('year').textContent = new Date().getFullYear();
+<!-- Safe helpers -->
+<script>
+  // Tahun otomatis: aman jika #year tidak ada
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // Smooth scroll anchor
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id = a.getAttribute('href');
-        if(id.length>1){
-          const el = document.querySelector(id);
-          if(el){
-            e.preventDefault();
-            const y = el.getBoundingClientRect().top + window.pageYOffset - 72; // offset navbar
-            window.scrollTo({top:y, behavior:'smooth'});
-          }
+  // Smooth anchor
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const id = a.getAttribute('href');
+      if(id.length>1){
+        const el = document.querySelector(id);
+        if(el){
+          e.preventDefault();
+          const y = el.getBoundingClientRect().top + window.pageYOffset - 72;
+          window.scrollTo({top:y, behavior:'smooth'});
         }
-      });
+      }
     });
-  </script>
-    <!-- Back to Top (harus di dalam <body>) -->
-  <button id="toTop" class="btn btn-primary back-to-top" aria-label="Back to top">
-    <i class="bi bi-arrow-up"></i>
-  </button>
+  });
+</script>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Panggil file JS milikmu SETELAH konten -->
-  <script src="scroll.js"></script>
+<!-- Tombol Back to Top -->
+<button id="toTop" class="back-to-top" aria-label="Back to top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Logic Back to Top -->
+<script>
+(() => {
+  const btn = document.getElementById('toTop');
+  if (!btn) return;
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // tampilkan tombol setelah scroll > 400px
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) btn.classList.add('show');
+    else btn.classList.remove('show');
+  });
+
+  // klik -> scroll ke atas
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: prefersReduced ? 'auto' : 'smooth' });
+  });
+})();
+</script>
 </body>
 </html>
