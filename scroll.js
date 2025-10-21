@@ -20,22 +20,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-<script>
-  (function(){
-    const scroller = document.getElementById('testiScroller');
-    const prev = document.getElementById('tPrev');
-    const next = document.getElementById('tNext');
-
-    if (!scroller || !prev || !next) return;
-
-    const step = () => Math.min(scroller.clientWidth * 0.9, 640);
-
-    prev.addEventListener('click', () => {
-      scroller.scrollBy({ left: -step(), behavior: 'smooth' });
-    });
-    next.addEventListener('click', () => {
-      scroller.scrollBy({ left:  step(), behavior: 'smooth' });
-    });
-  })();
-</script>
-
