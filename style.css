@@ -13,10 +13,6 @@ body{color:var(--brand); background:#fff;}
 .section-sm{padding:56px 0;}
 .lead-sm{font-size:1.05rem; color:var(--muted);}
 
-/* Navbar */
-.navbar{backdrop-filter:saturate(140%) blur(8px);}
-.navbar .navbar-brand{font-weight:700; letter-spacing:.5px;}
-
 /* Hero */
 .hero{
   position:relative; min-height:86vh; display:grid; place-items:center; color:#fff;
@@ -48,11 +44,6 @@ body{color:var(--brand); background:#fff;}
 
 /* Carousel indicators */
 .carousel-indicators [data-bs-target]{background:#111827;}
-
-/* Footer */
-footer{background:#111827; color:#E5E7EB;}
-footer a{color:#fff; text-decoration:none;}
-footer a:hover{opacity:.9;}
 
 /* Responsive */
 @media (max-width:991.98px){

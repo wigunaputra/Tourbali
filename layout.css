@@ -1,0 +1,53 @@
+/* ===== NAVBAR (global, sama di semua halaman) ===== */
+.navbar {
+  backdrop-filter: saturate(140%) blur(8px);
+  background:#fff;
+  height:80px;                    /* kunci tinggi */
+}
+.navbar .container{
+  height:100%;
+  display:flex; align-items:center;
+}
+.navbar-brand{
+  font-weight:700; letter-spacing:.5px; color:var(--brand); font-size:1.05rem;
+}
+.navbar-nav{align-items:center;}
+.navbar-nav .nav-link{
+  font-weight:700; font-size:1.05rem; color:var(--brand);
+  padding:0 !important; line-height:1; margin-left:12px;
+  transition:color .2s ease;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active{ color:var(--accent); }
+
+/* ===== CTA FOOTER (blok gelap “Let’s Get You Moving”) ===== */
+.footer-cta{
+  background:#0f172a; /* mirip #111827 tapi sedikit lebih lembut */
+  color:#E5E7EB;
+  padding:64px 0;
+}
+.footer-cta h2{font-weight:800; letter-spacing:.2px; color:#fff;}
+.footer-cta p{color:#cbd5e1;}
+.footer-cta .btn{
+  background:#fff; color:#111827; border:0; border-radius:999px; padding:12px 22px; font-weight:700;
+}
+.footer-cta .btn:hover{filter:brightness(0.95);}
+
+/* ===== FOOTER BAR (strip paling bawah) ===== */
+.site-footer{
+  background:#0b1220; color:#cbd5e1; font-size:.95rem;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.site-footer .footer-bar{
+  display:flex; gap:16px; justify-content:space-between; align-items:center; padding:14px 0;
+}
+.site-footer .footer-nav a{ color:#cbd5e1; text-decoration:none; margin-left:18px; font-weight:600; }
+.site-footer .footer-nav a:hover{ opacity:.9; }
+
+/* ===== Responsive ===== */
+@media (max-width: 991.98px){
+  .navbar{ height:64px; }
+  .navbar .container{ align-items:center; }
+  .footer-cta{ padding:48px 0; }
+  .site-footer .footer-bar{ flex-direction:column; text-align:center; }
+}
