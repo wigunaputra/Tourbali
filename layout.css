@@ -52,3 +52,54 @@
   .site-footer .footer-bar{ flex-direction:column; text-align:center; }
 }
 
+/* ===== Navbar global (desktop) tetap seperti sebelumnya ===== */
+.navbar{ height:80px; backdrop-filter:saturate(140%) blur(8px); background:#fff; }
+.navbar .container{ height:100%; display:flex; align-items:center; }
+.navbar-brand{ font-weight:700; letter-spacing:.5px; color:#111827; font-size:1.05rem; }
+.navbar-nav .nav-link{ font-weight:700; font-size:1.05rem; color:#111827; padding:0 !important; line-height:1; transition:color .2s; }
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active{ color:#111827; }
+@media (max-width:991.98px){ .navbar{ height:64px; } }
+
+/* ===== Offcanvas (mobile/tablet) ===== */
+@media (max-width: 991.98px){
+  /* Sembunyikan collapse desktop */
+  .navbar .collapse{ display:none !important; }
+
+  /* Toggler tanpa border */
+  .navbar-toggler{ border:0; box-shadow:none !important; }
+  .navbar-toggler:focus{ outline:none; box-shadow:none; }
+
+  /* Panel */
+  .offcanvas{ width: 290px; border-left:1px solid #e5e7eb; }
+  .offcanvas-header{ border-bottom:1px solid #e5e7eb; }
+  .offcanvas-title{ font-weight:700; color:#111827; }
+
+  /* Link list */
+  .offcanvas-body .nav-link{
+    display:block;
+    padding:12px 0;
+    font-weight:700;
+    font-size:1.05rem;
+    color:#111827;
+  }
+  .offcanvas-body .nav-link:hover{ opacity:.9; }
+
+  /* Backdrop sedikit blur biar UI terasa elevated */
+  .offcanvas-backdrop.show{ backdrop-filter: blur(2px); }
+}
+
+/* ===== Smooth scroll + kompensasi navbar fixed ke anchor ===== */
+html{ scroll-behavior:smooth; }
+[id]{ scroll-margin-top:96px; }                 /* desktop */
+@media (max-width:991.98px){ [id]{ scroll-margin-top:80px; } }  /* mobile/tablet */
+
+/* NAVBAR DI ATAS SEMUA ELEMEN + OFFSET BODY */
+.navbar { z-index: 1200; }
+
+.hero, .services-hero { position: relative; }
+.hero::after, .services-hero::after { z-index: 0; }
+.hero-inner, .services-hero .container { position: relative; z-index: 1; }
+
+/* beri ruang setinggi navbar */
+@media (min-width: 992px){ body { padding-top: 80px; } }
+@media (max-width: 991.98px){ body { padding-top: 64px; } }

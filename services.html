@@ -13,24 +13,25 @@
     <link rel="stylesheet" href="layout.css">   <!-- navbar + footer + footer-cta -->
     <link rel="stylesheet" href="services.css" />
 </head>
+
 <body>
-
-  <!-- =========================
-       NAVBAR (unified)
-  ========================== -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom shadow-sm site-nav">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">TourTravelBali</a>
+      <a class="navbar-brand fw-bold" href="index.html">TourTraveBali</a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Toggler: buka offcanvas di kanan -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
+              aria-controls="mobileNav" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
+      <!-- Desktop menu (lg ke atas) -->
+      <div class="collapse navbar-collapse d-none d-lg-flex">
+        <ul class="navbar-nav ms-auto align-items-center">
           <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link px-3" href="about">About</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#about">About Us</a></li>
           <li class="nav-item"><a class="nav-link px-3" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
         </ul>
@@ -38,76 +39,458 @@
     </div>
   </nav>
 
+  <!-- Offcanvas mobile/tablet -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mobileNavLabel">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+
   <!-- =========================
        HERO SECTION
   ========================== -->
   <section class="services-hero d-flex align-items-center justify-content-center text-center">
     <div class="container">
-      <h1 class="fw-bold text-white">Our Reliable Services</h1>
+      <h1 class="fw-bold text-white">Reliable Rides, Unforgettable Journeys</h1>
       <p class="text-white-50">
-        Private tours, airport transfers, and custom Bali experiences tailored for you.
+        Let us handle the road while you enjoy every moment of your Bali adventure.
       </p>
     </div>
   </section>
 
-  <!-- =========================
-       SERVICES GRID
-  ========================== -->
-  <section class="services-section py-5">
-    <div class="container">
-      <h2 class="text-center mb-5 fw-bold">— Our Services —</h2>
+<!-- =========================
+     SERVICES GRID (copy-paste)
+========================= -->
+<section class="services-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">— Activities Tour —</h2>
 
-      <div class="row g-4">
-        <!-- Card 1 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card service-card h-100 shadow-sm">
-            <img src="img/airport.jpg" class="card-img-top" alt="Airport Transfer" />
-            <div class="card-body">
-              <h5 class="card-title">Airport Transfer</h5>
-              <p class="card-text">Comfortable airport pickup & drop-off with professional drivers.</p>
-              <button class="btn btn-outline-success w-100">Book Now</button>
+    <div class="row g-4 tour-grid">
+      <!-- 1 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/1.png" alt="Ubud Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">Ubud Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 9 hours</span>
+              <span class="chip">8 am – 5 pm</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 520+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
             </div>
           </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card service-card h-100 shadow-sm">
-            <img src="img/private-tour.jpg" class="card-img-top" alt="Private Tour" />
-            <div class="card-body">
-              <h5 class="card-title">Private Tour</h5>
-              <p class="card-text">Enjoy Bali your way with flexible itineraries and experienced guides.</p>
-              <button class="btn btn-outline-success w-100">Book Now</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card service-card h-100 shadow-sm">
-            <img src="img/custom-trip.jpg" class="card-img-top" alt="Custom Trip" />
-            <div class="card-body">
-              <h5 class="card-title">Custom Trip</h5>
-              <p class="card-text">Plan your dream journey across Bali with personalized service.</p>
-              <button class="btn btn-outline-success w-100">Book Now</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card service-card h-100 shadow-sm">
-            <img src="img/driver.jpg" class="card-img-top" alt="Daily Driver Hire" />
-            <div class="card-body">
-              <h5 class="card-title">Daily Driver Hire</h5>
-              <p class="card-text">Hire a private driver for a full day of exploring Bali hassle-free.</p>
-              <button class="btn btn-outline-success w-100">Book Now</button>
-            </div>
-          </div>
-        </div>
+        </article>
       </div>
-    </div>
-  </section>
+
+      <!-- 2 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/2.png" alt="Ubud 2" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">Ubud 2</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 9 hours</span>
+              <span class="chip">8 am – 5 pm</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 305+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 3 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/3.png" alt="Best of Ubud Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">Best of Ubud Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 8 hours</span>
+              <span class="chip">8 am – 5 pm</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 570+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 4 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/4.png" alt="Art Village Ubud Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">Art Village Ubud Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 9 hours</span>
+              <span class="chip">8 am – 5 pm</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 340+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 5 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/5.png" alt="Best of Ubud Kintamani Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">Best of Ubud Kintamani Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 9 hours</span>
+              <span class="chip">8 am – 5 pm</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 402+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 6 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/6.png" alt="Tanah Lot Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">Tanah Lot Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 8 hours</span>
+              <span class="chip">1 pm – 9 pm</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 287+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 7 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/7.png" alt="City Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">City Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 8 hours</span>
+              <span class="chip">9 am – 5 pm</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 366+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 8 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/8.png" alt="Kintamani Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">Kintamani Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 9 hours</span>
+              <span class="chip">8 am – 5 pm</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 298+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 9 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/9.png" alt="Bedugul Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">Bedugul Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 9 hours</span>
+              <span class="chip">8 am – 5 pm</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 255+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 10 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/10.png" alt="North Bali Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">North Bali Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 10 hours</span>
+              <span class="chip">8 am – 6 pm</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 187+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 11 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/11.png" alt="Uluwatu Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">Uluwatu Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 9 hours</span>
+              <span class="chip">11 am – 8 pm</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 411+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 12 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/12.png" alt="Besakih Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">Besakih Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 10 hours</span>
+              <span class="chip">8 am – 6 pm</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 233+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 13 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/13.png" alt="The Heaven Gate Lempuyang Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">The Heaven Gate Lempuyang Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 10 hours</span>
+              <span class="chip">5 am – 3 pm / 10 am – 8 pm</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 520+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 14 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/14.png" alt="The Instagram Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">The Instagram Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 10 hours</span>
+              <span class="chip">5 am – 3 pm / 10 am – 8 pm</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 427+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 15 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/15.png" alt="The Bali Clubing Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">The Bali Clubing Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 10 hours</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 199+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 16 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/16.png" alt="The Adventure Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">The Adventure Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 8 am – Done</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 210+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 17 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/17.png" alt="The Seafood Lover Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">The Seafood Lover Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 4:30 pm – 9:30 pm</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 142+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 18 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/18.png" alt="The Nemo Fish Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">The Nemo Fish Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 8 am – Done</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 167+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 19 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/19.png" alt="The Manta Rays Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">The Manta Rays Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 6:30 am – Done</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 184+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 20 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="tour-card soft-card h-100">
+          <div class="thumb">
+            <img src="img/services/20.png" alt="The Nusa Penida Tour" loading="lazy">
+            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+          </div>
+          <div class="body">
+            <h6 class="title">The Nusa Penida Tour</h6>
+            <div class="meta">
+              <span class="chip"><img src="iconservices/clock.svg" alt=""> 7 am – Done</span>
+            </div>
+            <div class="footer">
+              <div class="rating"><img src="iconservices/star.svg" alt=""><span>4.7</span><span class="muted">· 392+ reviews</span></div>
+              <a class="btn btn-sm btn-outline-dark" href="#">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+  </div>
+</section>
 
   <!-- =========================
        CTA SECTION
@@ -117,6 +500,50 @@
     <p>Click to Chat on WhatsApp – Our Driver Is Ready</p>
     <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-light mt-3">Chat Now</a>
   </section>
+
+<!-- ===== CTA / LET'S GET YOU MOVING ===== -->
+<section id="contact" class="cta-dark section">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <!-- Left -->
+      <div class="col-lg-6">
+        <h2 class="cta-title">Let’s Get You Moving</h2>
+        <p class="cta-desc">
+          Ready to book your ride? Have questions about tours or custom packages?
+          We’re here to help – fast, friendly, and always happy to make your trip easier.
+        </p>
+        <!-- ganti href WA sesuai nomormu -->
+        <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-light btn-lg rounded-pill cta-btn">
+          <!-- pakai ikonmu sendiri (PNG/SVG) -->
+          <img src="iconfooter/Vector.svg" alt="" class="me-2" style="width:18px;height:18px;">
+          Book Now
+        </a>
+      </div>
+      <!-- Right -->
+      <div class="col-lg-6">
+        <h3 class="cta-heading">Contact Details</h3>
+        <ul class="contact-list">
+          <li>
+            <span class="icon"><img src="iconfooter/location-01.png" alt=""></span>
+            <div><strong>Location:</strong> Bali &amp; Nusa Penida, Indonesia</div>
+          </li>
+          <li>
+            <span class="icon"><img src="iconfooter/mail-01.png" alt=""></span>
+            <div><strong>Email:</strong> <a href="mailto:hello@yourdriver.com">hello@yourdriver.com</a></div>
+          </li>
+          <li>
+            <span class="icon"><img src="iconfooter/call.png" alt=""></span>
+            <div><strong>Phone/WhatsApp:</strong> <a href="https://wa.me/6281234567890" target="_blank">+62 812 3456 7890</a></div>
+          </li>
+          <li>
+            <span class="icon"><img src="iconfooter/time-04.png" alt=""></span>
+            <div><strong>Available:</strong> 24/7</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- =========================
        FOOTER
@@ -148,5 +575,97 @@
       });
     })();
   </script>
+
+  <!-- Bootstrap JS  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Safe helpers -->
+  <script>
+    // Tahun otomatis: aman jika #year tidak ada
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Smooth anchor
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href');
+        if(id.length>1){
+          const el = document.querySelector(id);
+          if(el){
+            e.preventDefault();
+            const y = el.getBoundingClientRect().top + window.pageYOffset - 72;
+            window.scrollTo({top:y, behavior:'smooth'});
+          }
+        }
+      });
+    });
+  </script>
+
+    <!-- Tombol Back to Top -->
+  <button id="toTop" class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Logic Back to Top -->
+  <script>
+    (() => {
+      const btn = document.getElementById('toTop');
+      if (!btn) return;
+
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+          // tampilkan tombol setelah scroll > 400px
+          window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) btn.classList.add('show');
+            else btn.classList.remove('show');
+          });
+
+        // klik -> scroll ke atas
+        btn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: prefersReduced ? 'auto' : 'smooth' });
+        });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      // Klik link di offcanvas: tutup dulu, lalu navigate
+      document.querySelectorAll('#mobileNav a.nav-link').forEach(a => {
+        a.addEventListener('click', function (e) {
+          const href = this.getAttribute('href') || '';
+          const hasHash = href.includes('#');
+          const onlyHash = href.startsWith('#');
+
+          // kalau linknya hash di halaman yang sama (mis. "#contact") dan target ada → biar handler smooth-scroll lain yang urus
+          if (onlyHash && document.querySelector(href)) return;
+
+          // selain itu (index.html, services.html, atau index.html#contact) → tunda sampai offcanvas tertutup
+          e.preventDefault();
+
+          const ocEl = document.getElementById('mobileNav');
+          const oc = bootstrap.Offcanvas.getInstance(ocEl) || new bootstrap.Offcanvas(ocEl);
+          oc.hide();
+
+          const go = () => {
+            ocEl.removeEventListener('hidden.bs.offcanvas', go);
+            // pindah halaman
+            window.location.href = href;
+          };
+          ocEl.addEventListener('hidden.bs.offcanvas', go);
+        });
+      });
+
+      // Opsional: smooth-scroll untuk anchor yang ada di halaman yang sama (desktop & mobile)
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function (e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (!target) return;
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    })();
+  </script>
+
 </body>
 </html>
