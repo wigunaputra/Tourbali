@@ -78,10 +78,12 @@
     <div class="row g-4 tour-grid">
       <!-- 1 -->
       <div class="col-12 col-sm-6 col-lg-3">
-        <article class="tour-card soft-card h-100">
+        <article class="tour-card soft-card h-100" data-link="tour-detail-ubud.html">
           <div class="thumb">
             <img src="img/services/1.png" alt="Ubud Tour" loading="lazy">
-            <button class="bookmark" aria-label="Save"><img src="iconservices/bookmark-02.svg" alt=""></button>
+            <button class="bookmark" aria-label="Save">
+              <img src="iconservices/bookmark-02.svg" alt="">
+            </button>
           </div>
           <div class="body">
             <h6 class="title">Ubud Tour</h6>
@@ -666,6 +668,21 @@
       });
     })();
   </script>
+
+  <script>
+  // === Klik seluruh card untuk buka halaman detail ===
+    document.querySelectorAll('.tour-card[data-link]').forEach(card => {
+      card.addEventListener('click', e => {
+        // Jika yang diklik tombol bookmark atau tombol Book Now, jangan pindah
+        if (e.target.closest('.bookmark') || e.target.closest('a')) return;
+        // Ambil link dari atribut data-link
+        const link = card.getAttribute('data-link');
+        // Buka halaman detail
+        window.location.href = link;
+      });
+    });
+  </script>
+
 
 </body>
 </html>

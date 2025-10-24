@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detail Tour – Ubud</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Icons (opsional) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Styles -->
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="layout.css">
+   <link rel="stylesheet" href="tour-detail.css">
+
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">TourTraveBali</a>
+
+      <!-- Toggler: buka offcanvas di kanan -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
+              aria-controls="mobileNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Desktop menu (lg ke atas) -->
+      <div class="collapse navbar-collapse d-none d-lg-flex">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Offcanvas mobile/tablet -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mobileNavLabel">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+    <section class="pagehead">
+        <div class="container">
+            <p class="eyebrow">Detail Tour</p>
+            <h1 class="title">UBUD</h1>
+        </div>
+    </section>
+
+    <section class="gallery-slider container">
+        <div class="gs-track" id="ubudTrack">
+            <!-- 6 contoh foto; boleh tambah/kurangi -->
+            <figure class="gs-item"><img src="images/ubud-1.jpg" alt="Ubud 1" draggable="false"></figure>
+            <figure class="gs-item"><img src="images/ubud-2.jpg" alt="Ubud 2" draggable="false"></figure>
+            <figure class="gs-item"><img src="images/ubud-3.jpg" alt="Ubud 3" draggable="false"></figure>
+            <figure class="gs-item"><img src="images/ubud-4.jpg" alt="Ubud 4" draggable="false"></figure>
+            <figure class="gs-item"><img src="images/ubud-5.jpg" alt="Ubud 5" draggable="false"></figure>
+            <figure class="gs-item"><img src="images/ubud-6.jpg" alt="Ubud 6" draggable="false"></figure>
+        </div>
+    </section>
+
+    <section class="info-bar">
+        <div class="container info-cards">
+            <div class="card">
+                <h3 class="mb-1">One Day Package Tour</h3>
+                <div class="meta">
+                    <span><i class="fa-regular fa-clock me-1"></i> 9 hours tour</span>
+                    <span><i class="fa-regular fa-bell me-1"></i> 8am – 5pm</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container grid-main">
+    <!-- LEFT: Accordion -->
+    <div class="left">
+        <details class="acc" open>
+            <summary class="acc-head">
+                <span>Itinerary</span>
+            </summary>
+            <div class="acc-body">
+                <article class="poi">
+                    <h4>Barong Dance Village</h4>
+                    <p>Barong is the most well-known Balinese dance and a classic example of mythological storytelling.</p>
+                </article>
+                <article class="poi">
+                    <h4>Tegenungan Waterfall</h4>
+                    <p>Located in Kemenuh, Gianyar (±30 km from Denpasar). Height ±15 m, clear water—great for photos.</p>
+                </article>
+                <article class="poi">
+                    <h4>Tegallalang Rice Terraces</h4>
+                    <p>Iconic subak terraces; scenic walkways with optional swing & coffee stop.</p>
+                </article>
+            </div>
+        </details>
+
+        <details class="acc">
+            <summary class="acc-head">
+                <span>Pricing</span>
+            </summary>
+            <div class="acc-body">
+                <ul class="bullets mb-0">
+                <li>IDR 1.000.000 / car</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="acc">
+            <summary class="acc-head">
+                <span>Include packed</span>
+            </summary>
+            <div class="acc-body">
+                <ul class="bullets mb-0">
+                <li>Car</li><li>Petrol</li><li>English Speaking Driver</li><li>Parking fee</li><li>Mineral Water</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="acc">
+            <summary class="acc-head">
+                <span>NB</span>
+            </summary>
+            <div class="acc-body">
+                <ul class="bullets mb-0">
+                <li>Vehicle Suzuki APV (7 seats)</li>
+                <li>Other vehicles by request</li>
+                <li>Cool box for cold drinks upon request</li>
+                </ul>
+            </div>
+        </details>
+    </div>
+
+        <!-- RIGHT: Reservation -->
+            <aside class="right card sticky">
+                <h3>Tour Reservation</h3>
+                <form id="waForm" class="form">
+                    <label>Nama
+                        <input id="guestName" type="text" placeholder="Your name" required>
+                    </label>
+                    <label>Tanggal
+                        <input id="tourDate" type="date" required>
+                    </label>
+                    <label>Email <input type="email" placeholder="you@email.com" required></label>
+                    <label>Pesan tambahan (opsional)
+                        <textarea id="extraMsg" rows="5" placeholder="Additional message"></textarea>
+                    </label>
+                    <button id="submitBtn" class="btn btn-primary w-100" type="submit">Submit (via WhatsApp)</button>
+                </form>
+                <div class="price-note">
+                    <div class="price">IDR 1.000.000<span>/day</span></div>
+                </div>
+                <div class="mt-3">
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="confirmedCheck">
+                            <label class="form-check-label" for="confirmedCheck">
+                                Saya sudah menerima konfirmasi ketersediaan via WhatsApp
+                            </label>
+                    </div>
+                    <a id="payBtn" class="btn w-100 btn-secondary disabled" href="#" role="button" aria-disabled="true">Bayar</a>
+                </div>
+            </aside>
+    </section>
+
+  <!-- ===== CTA / LET'S GET YOU MOVING ===== -->
+    <section id="contact" class="cta-dark section">
+    <div class="container">
+        <div class="row g-4 align-items-start">
+        <!-- Left -->
+        <div class="col-lg-6">
+            <h2 class="cta-title">Let’s Get You Moving</h2>
+            <p class="cta-desc">
+            Ready to book your ride? Have questions about tours or custom packages?
+            We’re here to help – fast, friendly, and always happy to make your trip easier.
+            </p>
+            <!-- ganti href WA sesuai nomormu -->
+            <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-light btn-lg rounded-pill cta-btn">
+            <!-- pakai ikonmu sendiri (PNG/SVG) -->
+            <img src="iconfooter/Vector.svg" alt="" class="me-2" style="width:18px;height:18px;">
+            Book Now
+            </a>
+        </div>
+        <!-- Right -->
+        <div class="col-lg-6">
+            <h3 class="cta-heading">Contact Details</h3>
+            <ul class="contact-list">
+            <li>
+                <span class="icon"><img src="iconfooter/location-01.png" alt=""></span>
+                <div><strong>Location:</strong> Bali &amp; Nusa Penida, Indonesia</div>
+            </li>
+            <li>
+                <span class="icon"><img src="iconfooter/mail-01.png" alt=""></span>
+                <div><strong>Email:</strong> <a href="mailto:hello@yourdriver.com">hello@yourdriver.com</a></div>
+            </li>
+            <li>
+                <span class="icon"><img src="iconfooter/call.png" alt=""></span>
+                <div><strong>Phone/WhatsApp:</strong> <a href="https://wa.me/6281234567890" target="_blank">+62 812 3456 7890</a></div>
+            </li>
+            <li>
+                <span class="icon"><img src="iconfooter/time-04.png" alt=""></span>
+                <div><strong>Available:</strong> 24/7</div>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- =========================
+        FOOTER
+    ========================== -->
+    <footer class="site-footer">
+        <div class="container footer-bar">
+        <div class="footer-copy">
+            © 2025 TourTraveBali · Safe, Reliable, Friendly Rides
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        </div>
+    </footer>
+
+  <script>
+    // tahun footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Bootstrap JS (wajib untuk hamburger/offcanvas) -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    (function () {
+        // Klik link di offcanvas: tutup dulu, lalu navigate
+        document.querySelectorAll('#mobileNav a.nav-link').forEach(a => {
+        a.addEventListener('click', function (e) {
+            const href = this.getAttribute('href') || '';
+            const onlyHash = href.startsWith('#');
+            if (onlyHash && document.querySelector(href)) return; // biar smooth scroll yang handle
+
+            e.preventDefault();
+            const ocEl = document.getElementById('mobileNav');
+            const oc = bootstrap.Offcanvas.getInstance(ocEl) || new bootstrap.Offcanvas(ocEl);
+            oc.hide();
+
+            const go = () => {
+            ocEl.removeEventListener('hidden.bs.offcanvas', go);
+            window.location.href = href;
+            };
+            ocEl.addEventListener('hidden.bs.offcanvas', go);
+        });
+        });
+
+        // Smooth scroll untuk anchor di halaman yang sama
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function (e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (!target) return;
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        });
+    })();
+    </script>
+
+    <script>
+    (() => {
+        // Ganti ke nomor WhatsApp admin (format internasional tanpa + atau spasi)
+        const WA_NUMBER = '6281234567890'; // contoh: +62 812 3456 7890 → '6281234567890'
+        const TOUR_NAME = 'Ubud Tour';
+        const PRICE_TEXT = 'IDR 1.000.000 / day';
+
+        const form = document.getElementById('waForm');
+        const nameEl = document.getElementById('guestName');
+        const dateEl = document.getElementById('tourDate');
+        const msgEl  = document.getElementById('extraMsg');
+
+        const confirmed = document.getElementById('confirmedCheck');
+        const payBtn = document.getElementById('payBtn');
+
+        // Submit → buka WhatsApp dengan pesan terformat
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = nameEl.value.trim();
+            const dateVal = dateEl.value;
+                if(!name || !dateVal){
+                alert('Nama dan Tanggal wajib diisi.');
+                return;
+                }
+
+            // Format tanggal ke Indonesia
+            const dateObj = new Date(dateVal + 'T00:00:00');
+            const dateStr = isNaN(dateObj) ? dateVal :
+            dateObj.toLocaleDateString('id-ID', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+
+            const extra = msgEl.value.trim();
+
+            const text =
+        `Halo Admin TourTraveBali, saya ingin cek ketersediaan paket:
+        • Paket: ${TOUR_NAME}
+        • Tanggal: ${dateStr}
+        • Harga: ${PRICE_TEXT}
+        • Nama: ${name}
+        ${extra ? '• Pesan: ' + extra : ''}
+
+        Mohon info apakah paket ini tersedia pada tanggal tersebut. Terima kasih!`;
+
+        const waURL = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+        window.open(waURL, '_blank'); // buka tab WA
+    });
+
+    // Centang "sudah konfirmasi" → aktifkan tombol Bayar
+    confirmed.addEventListener('change', () => {
+        if (confirmed.checked) {
+            payBtn.classList.remove('disabled', 'btn-secondary');
+            payBtn.classList.add('btn-success');
+            payBtn.setAttribute('aria-disabled', 'false');
+        // TODO: ganti link paymentmu di sini
+        payBtn.href = '#'; // misal ke /checkout.html
+        } else {
+            payBtn.classList.add('disabled', 'btn-secondary');
+            payBtn.classList.remove('btn-success');
+            payBtn.setAttribute('aria-disabled', 'true');
+            payBtn.href = '#';
+        }
+    });
+    })();
+    </script>
+
+  
+</body>
+</html>

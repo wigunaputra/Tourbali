@@ -1,0 +1,343 @@
+/* ===== tour-detail.css ===== */
+
+/* Offset untuk navbar fixed-top */
+.content-wrap { padding-top: 88px; }
+@media (min-width: 992px) { .content-wrap { padding-top: 96px; } }
+
+/* Header section */
+.pagehead {
+    text-align: center;
+    padding: 2.5rem 0 1.25rem;
+}
+.pagehead .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--muted);
+    margin: 0 0 0.25rem;
+}
+.pagehead .title {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    margin: 0;
+}
+
+/* ===== Gallery Slider ===== */
+.gallery-slider{position:relative; margin-bottom:16px}
+.gallery-slider .gs-header{padding:24px 0 12px}
+.gallery-slider .eyebrow{
+    letter-spacing:.25em; text-transform:uppercase; color:var(--muted); margin:0 0 .25rem;
+}
+.gallery-slider .title{margin:0; font-size:clamp(28px,4vw,42px)}
+
+/* track: flex horizontal + snap */
+.gs-track{
+    display:flex; gap:16px; overflow-x:auto; padding:6px 4px 10px;
+    scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;
+    scrollbar-width:none; /* Firefox */
+}
+.gs-track::-webkit-scrollbar{display:none} /* Chrome/Safari */
+
+/* item kartu foto */
+.gs-item{
+    flex:0 0 auto; scroll-snap-align:start;
+    border:1px solid var(--line); border-radius:16px; overflow:hidden;
+    background:#f8fafc; aspect-ratio:16/9;
+    width:clamp(220px, 32vw, 420px); /* default desktop */
+}
+.gs-item img{width:100%; height:100%; object-fit:cover; display:block}
+
+/* responsif: lebih lebar di layar kecil */
+@media (max-width:1199.98px){ .gs-item{ width:45vw; } }   /* tablet */
+@media (max-width:767.98px){  .gs-item{ width:82vw; } }   /* mobile */
+
+.gs-nav.prev{left:-6px}
+.gs-nav.next{right:-6px}
+@media (hover:hover){ .gs-nav:hover{filter:brightness(1.05)} }
+@media (max-width:575.98px){ .gs-nav{display:none} } /* sembunyikan di hp kecil */
+
+/* Info bar */
+.info-cards {
+    text-align: center;
+    display: grid;
+    gap: 1rem;
+}
+.info-cards .card {
+  padding: 1rem 1.2rem;
+}
+.info-cards h3 {
+  margin: 0;
+}
+.info-cards .meta {
+    justify-content: center;
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+    color: var(--muted);
+}
+
+/* Main grid layout */
+.grid-main {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem 0 3rem;
+  align-items: start;
+}
+@media (min-width: 992px) {
+  .grid-main {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+/* Accordion */
+.left {
+  display: grid;
+  gap: 0.8rem;
+}
+.acc {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.acc-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.acc[open] .acc-head i {
+  transform: rotate(180deg);
+}
+.acc-head i {
+  transition: transform 0.25s ease;
+}
+.acc-body {
+  padding: 0 1.1rem 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--text);
+}
+.poi + .poi {
+  margin-top: 0.75rem;
+}
+.poi h4 {
+  margin-bottom: 0.25rem;
+}
+
+/* ====== DETAIL PAGE POLISH (drop-in overrides) ====== */
+
+/* Info card di atas accordion (One Day Package Tour) */
+.info-card {
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+}
+.info-card h3 { margin: 0 0 .25rem; font-weight: 700; }
+.info-meta { display: flex; gap: 18px; color: var(--muted); }
+
+/* Grid kiri–kanan */
+.grid-main { 
+  display: grid; gap: 18px; align-items: start; padding: 18px 0 40px;
+}
+@media (min-width: 992px) { .grid-main { grid-template-columns: 1.15fr .85fr; } }
+
+/* ===== Kotak-kotak accordion (Itinerary, Pricing, dll.) ===== */
+
+/* wrapper opsional agar spasi antar kotak rapi */
+.left { display: grid; gap: 10px; }
+
+/* setiap item jadi kotak */
+.acc{
+  background:#fff;                  /* biar putih */
+  border:1px solid #e5e7eb;         /* garis tipis */
+  border-radius:12px;               /* rounded */
+  overflow:hidden;
+  box-shadow:0 6px 16px rgba(0,0,0,.04); /* lembut */
+}
+
+/* header kotak */
+.acc summary{
+  list-style:none;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 16px;
+  font-weight:700;
+  cursor:pointer;
+  user-select:none;
+  background:#fff;
+}
+.acc summary::-webkit-details-marker{ display:none; }
+
+/* chevron di kanan */
+.acc summary::after{
+  content:""; width:18px; height:18px; margin-left:12px;
+  background:no-repeat center/18px 18px
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%239aa0a6' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z'/%3E%3C/svg%3E");
+  transform:rotate(0deg);
+  transition:transform .2s ease;
+}
+.acc[open] summary::after{ transform:rotate(180deg); }
+
+/* garis pemisah isi dengan header */
+.acc .acc-body{
+  border-top:1px solid #e5e7eb;
+  padding:12px 16px 14px;
+}
+
+/* hover & focus (biar enak diakses) */
+@media (hover:hover){
+  .acc summary:hover{ background:#f9fafb; }
+}
+.acc summary:focus-visible{
+  outline:2px solid #e0e0e0;
+  outline-offset:2px;
+  border-radius:10px; /* supaya ring mengikuti rounded */
+}
+
+/* typografi isi */
+.acc .poi + .poi{ margin-top:10px; }
+.acc .poi h4{ margin:6px 0 3px; font-size:1.05rem; }
+.acc .bullets{ margin:8px 0 0 18px; }
+
+
+/* ===== Panel kanan: Reservation ===== */
+.right.card {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+  padding: 16px;
+}
+.right h3 {
+  text-align: center;
+  margin: 4px 0 14px;
+  font-size: 1.4rem; font-weight: 700;
+}
+
+/* Form rapi */
+.form { display: grid; gap: 10px; }
+.form label { display: grid; gap: 6px; font-weight: 600; font-size: .92rem; }
+.form input, .form textarea {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #fff; color: var(--text);
+  padding: 10px 12px;
+}
+.form textarea { height: 120px; resize: vertical; }
+.form input:focus, .form textarea:focus {
+  outline: none; border-color: #7db6f8; box-shadow: 0 0 0 4px rgba(59,130,246,.15);
+}
+
+/* Tombol submit (biru) */
+#submitBtn.btn { 
+  height: 44px; border-radius: 10px;
+  letter-spacing: .2px; font-weight: 600;
+}
+
+/* Harga besar di tengah: IDR … /day */
+.price-note { margin-top: 14px; text-align: center; }
+.price { font-size: 1.75rem; font-weight: 800; }
+.price span { margin-left: .25rem; font-size: .9rem; color: var(--muted); }
+
+/* Checkbox konfirmasi + tombol Bayar disabled */
+.form-check-input { transform: translateY(1px); }
+#payBtn.btn { height: 44px; border-radius: 10px; font-weight: 600; }
+#payBtn.disabled, a.btn.disabled {
+  pointer-events: none; opacity: .65;
+}
+
+/* Spasi bagian bawah agar napas */
+.right .mt-3 { margin-top: 14px !important; }
+
+
+/* ===== CTA Dark ===== */
+.cta-dark{
+  background:#1f2430;       /* abu gelap elegan */
+  color:#eef2f7;
+  padding: 64px 0 40px;
+}
+
+.cta-title{
+  font-weight: 800;
+  font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+  margin-bottom: 12px;
+  color:#ffffff;
+}
+
+.cta-desc{
+  color:#c7cbd4;
+  max-width: 520px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.cta-btn{
+  padding: 10px 18px;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
+}
+
+/* Heading kanan */
+.cta-heading{
+  color:#ffffff;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+/* Contact list */
+.contact-list{
+  list-style:none;
+  padding:0; margin:0;
+  display:flex; flex-direction:column; gap:14px;
+}
+.contact-list li{
+  display:flex; align-items:flex-start; gap:12px;
+  color:#e9edf3;
+}
+.contact-list .icon{
+  width:36px; height:36px; flex:0 0 36px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.05);
+  display:grid; place-items:center;
+}
+.contact-list .icon img{ width:18px; height:18px; display:block; filter:brightness(1.2); }
+.contact-list a{ color:#b8d3ff; text-decoration:none; }
+.contact-list a:hover{ text-decoration:underline; }
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+  background-color: #222;
+  color: #aaa;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+}
+
+.footer-nav a {
+  color: #aaa;
+  margin: 0 10px;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+}
