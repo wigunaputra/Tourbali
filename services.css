@@ -90,7 +90,7 @@
 .tour-card .meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
 .tour-card .chip {
   display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 10px; border: 1px solid #e5e7eb; border-radius: 999px;
+  padding: 6px 10px; border: 1px solid #e5e7eb; border-radius: 5px;
   font-size: .85rem; color: var(--muted); background: #fff;
 }
 .tour-card .chip img { width: 14px; height: 14px; }
@@ -100,7 +100,7 @@
 }
 .tour-card .rating { display: inline-flex; align-items: center; gap: 4px; font-weight: 400; }
 .tour-card .rating img { width: 10px; height: 10px; }
-.tour-card .rating .muted { color: var(--muted); font-weight: 400; font-size: .85rem; }
+.tour-card .rating .muted { color: var(--muted); font-weight: 400; font-size: .65rem; }
 
 /* tombol */
 .tour-card .btn { border-radius: 10px; padding: 4px 8px; }
@@ -120,17 +120,10 @@
 .tour-card .thumb img{ transition: transform .35s ease; }
 .tour-card:hover .thumb img{ transform: scale(1.02); }
 
-/* body lebih rapat */
-.tour-card .body{ padding: 12px 12px 14px; }
-.tour-card .title{
-  font-size: .98rem; line-height: 1.25; margin: 0 0 6px; font-weight: 700;
-  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-}
-
 /* meta chips versi kecil */
 .tour-card .meta{ gap: 6px; margin-bottom: 10px; }
 .tour-card .chip{
-  padding: 5px 8px; font-size: .8rem; border-radius: 999px; border-color:#e5e7eb;
+  padding: 5px 8px; font-size: .8rem; border-radius: 5px; border-color:#e5e7eb;
 }
 .tour-card .chip img{ width: 13px; height: 13px; }
 
@@ -208,7 +201,7 @@
 .tour-card .rating img { width: 16px; height: 16px; }
 .tour-card .rating span { display: inline-block; }
 .tour-card .rating .muted {
-  font-size: 0.85rem;
+  font-size: 0.65rem;
   color: #6b7280;
 }
 
@@ -223,6 +216,82 @@
     width: 100%;              /* tombol full di HP */
     height: 40px;
     font-size: 0.95rem;
+  }
+}
+
+/* ====== perataan rating horizontal (desktop & tablet) ====== */
+@media (min-width: 768px) {
+  .tour-card .rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: nowrap;           /* biar nggak turun ke bawah */
+    white-space: nowrap;         /* paksa satu baris */
+  }
+  .tour-card .rating img {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+  .tour-card .rating span {
+    line-height: 1;
+  }
+  .tour-card .rating .muted {
+    font-size: 0.65rem;
+    color: #6b7280;
+  }
+}
+
+/* ==== MOBILE ADJUSTMENT (≤767px) ==== */
+@media (max-width: 767.98px) {
+
+  /* gambar sedikit lebih kecil */
+  .tour-card .thumb {
+    aspect-ratio: 4/3;           
+  }
+
+  /* padding body lebih rapat */
+  .tour-card .body {
+    padding: 10px 12px 12px;
+  }
+
+  /* judul tetap jelas tapi tidak besar */
+  .tour-card .title {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+
+  /* meta chip lebih kecil */
+  .tour-card .chip {
+    font-size: 0.78rem;
+    padding: 4px 5px;
+  }
+
+  /* rating + text tetap rapi */
+  .tour-card .rating {
+    font-size: 0.85rem;
+    gap: 4px;
+  }
+
+  /* tombol Book Now lebih kecil */
+  .tour-card .btn {
+    width: 100%;             /* tetap full biar gampang diklik */
+    height: 34px;            /* sedikit lebih rendah */
+    font-size: 0.85rem;      /* teks kecil tapi masih readable */
+    padding: 6px 12px;
+    border-radius: 8px;      /* sedikit kurang membulat */
+  }
+
+  /* spacing antar elemen bawah */
+  .tour-card .footer {
+    margin-top: 8px;
+    gap: 6px;
+  }
+
+  /* border card lebih lembut */
+  .tour-card {
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   }
 }
 
