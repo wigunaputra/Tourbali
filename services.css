@@ -54,7 +54,7 @@
 }
 
 /* ====== GRID & CARD SERVICES ====== */
-.tour-grid { --gap: 16px; }
+.tour-grid { --gap: 12px; }
 
 .tour-card {
   border: 1px solid #e5e7eb;
@@ -98,18 +98,132 @@
 .tour-card .footer {
   display: flex; justify-content: space-between; align-items: center; gap: 10px;
 }
-.tour-card .rating { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
-.tour-card .rating img { width: 16px; height: 16px; }
+.tour-card .rating { display: inline-flex; align-items: center; gap: 4px; font-weight: 400; }
+.tour-card .rating img { width: 10px; height: 10px; }
 .tour-card .rating .muted { color: var(--muted); font-weight: 400; font-size: .85rem; }
 
 /* tombol */
-.tour-card .btn { border-radius: 10px; padding: 6px 12px; }
+.tour-card .btn { border-radius: 10px; padding: 4px 8px; }
 .tour-card .btn:hover { filter: brightness(0.96); }
 
 /* responsive tweaks */
 @media (max-width: 991.98px){
   .tour-card .body { padding: 12px; }
   .tour-card .title { font-size: .98rem; }
+}
+
+/* === Tokopedia-like compact cards === */
+.tour-grid { --gap: 12px; }
+
+/* bikin gambar lebih square-ish & penuh */
+.tour-card .thumb{ aspect-ratio: 4/3; border-bottom: 1px solid #eef0f2; }
+.tour-card .thumb img{ transition: transform .35s ease; }
+.tour-card:hover .thumb img{ transform: scale(1.02); }
+
+/* body lebih rapat */
+.tour-card .body{ padding: 12px 12px 14px; }
+.tour-card .title{
+  font-size: .98rem; line-height: 1.25; margin: 0 0 6px; font-weight: 700;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* meta chips versi kecil */
+.tour-card .meta{ gap: 6px; margin-bottom: 10px; }
+.tour-card .chip{
+  padding: 5px 8px; font-size: .8rem; border-radius: 999px; border-color:#e5e7eb;
+}
+.tour-card .chip img{ width: 13px; height: 13px; }
+
+/* rating + tombol lebih ringkas */
+.tour-card .footer{ gap: 8px; }
+.tour-card .rating{ gap: 6px; font-size: .9rem; }
+.tour-card .rating img{ width: 15px; height: 15px; }
+.tour-card .rating .muted{ font-size: .8rem; }
+
+/* tombol ala marketplace: kecil, outline, pill */
+.tour-card .btn{
+  padding: 6px 10px; border-radius: 8px; font-size: .85rem;
+  border:1px solid #111827; color:#111827; background:#fff;
+}
+.tour-card .btn:hover{ background:#111827; color:#fff; }
+
+/* bookmark mengecil & lebih dekat sudut */
+.tour-card .bookmark{
+  top: 8px; right: 8px; width: 30px; height: 30px; border-radius: 10px;
+}
+
+/* ===== Breakpoints: rapat di HP, lega di desktop ===== */
+@media (max-width: 767.98px){
+  .tour-card{ border-radius: 14px; }
+  .tour-card .thumb{ aspect-ratio: 1/1; }        /* square ala katalog di HP */
+  .tour-card .title{ font-size: .95rem; }
+  .tour-card .body{ padding: 10px; }
+}
+
+@media (min-width: 992px){
+  .tour-card .thumb{ aspect-ratio: 16/10; }      /* kembali lebar di desktop */
+  .tour-card .body{ padding: 14px 16px; }
+}
+
+/* ==== PERBAIKAN LAYOUT FOOTER CARD ==== */
+.tour-card .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;         /* vertikal rata tengah */
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* tombol "Book Now" lebih proporsional */
+.tour-card .btn {
+  padding: 4px 8px;
+  border: 1px solid #111827;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #111827;
+  background: #fff;
+  line-height: 1;
+  height: 28px;                /* tinggi konsisten semua layar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;         /* biar nggak pecah jadi dua baris */
+  transition: all 0.25s ease;
+}
+
+.tour-card .btn:hover {
+  background: #111827;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* rating sejajar rapi */
+.tour-card .rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1;
+}
+.tour-card .rating img { width: 16px; height: 16px; }
+.tour-card .rating span { display: inline-block; }
+.tour-card .rating .muted {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* responsif */
+@media (max-width: 767.98px) {
+  .tour-card .footer {
+    flex-direction: column;
+    align-items: flex-start; /* biar di HP stack tapi rapi */
+    gap: 8px;
+  }
+  .tour-card .btn {
+    width: 100%;              /* tombol full di HP */
+    height: 40px;
+    font-size: 0.95rem;
+  }
 }
 
 /* =========================
